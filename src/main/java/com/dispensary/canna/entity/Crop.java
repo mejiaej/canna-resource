@@ -14,6 +14,12 @@ public class Crop {
     private String imageUrl;
     private int ageDays;
 
+    private Long farmerId;
+
+    @ManyToOne
+    @JoinColumn(name = "farmerId", referencedColumnName = "id", insertable = false, updatable = false)
+    private Farmer farmer;
+
     public Long getId() {
         return id;
     }
@@ -44,5 +50,21 @@ public class Crop {
 
     public void setAgeDays(int ageDays) {
         this.ageDays = ageDays;
+    }
+
+    public Long getFarmerId() {
+        return farmerId;
+    }
+
+    public void setFarmerId(Long farmerId) {
+        this.farmerId = farmerId;
+    }
+
+    public Farmer getFarmer() {
+        return farmer;
+    }
+
+    public void setFarmer(Farmer farmer) {
+        this.farmer = farmer;
     }
 }
