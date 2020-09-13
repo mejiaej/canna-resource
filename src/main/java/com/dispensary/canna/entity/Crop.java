@@ -13,6 +13,8 @@ public class Crop {
     private String name;
     private String imageUrl;
     private int ageDays;
+    private String smallDesc;
+    private String description;
 
     private Long farmerId;
 
@@ -58,6 +60,22 @@ public class Crop {
 
     public void setFarmerId(Long farmerId) {
         this.farmerId = farmerId;
+    }
+
+    public String getSmallDesc() {
+        return smallDesc;
+    }
+
+    public void setSmallDesc(String smallDesc) {
+        this.smallDesc = smallDesc;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Farmer getFarmer() {
