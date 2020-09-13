@@ -12,6 +12,8 @@
       name VARCHAR(150) NOT NULL,
       image_url VARCHAR(250) NOT NULL,
       age_days INTEGER  NOT NULL,
+      small_desc VARCHAR(250) NOT NULL,
+      description TEXT NOT NULL,
       farmer_id INTEGER NOT NULL REFERENCES canna.farmer(id)
       );
 
